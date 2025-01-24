@@ -41,8 +41,10 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
-            gap: 16px; /* Espacement entre les cartes */
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 colonnes */
+            gap: 16px;
+            /* Espacement entre les cartes */
             padding: 16px;
         }
 
@@ -95,12 +97,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transform: translateY(-100%); /* Caché par défaut (au-dessus de l'image) */
-            transition: transform 0.4s ease; /* Animation fluide */
+            transform: translateY(-100%);
+            /* Caché par défaut (au-dessus de l'image) */
+            transition: transform 0.4s ease;
+            /* Animation fluide */
         }
 
         .card:hover .overlay {
-            transform: translateY(0); /* Glisse vers le bas lorsque la souris survole */
+            transform: translateY(0);
+            /* Glisse vers le bas lorsque la souris survole */
         }
 
         .button {
@@ -114,71 +119,70 @@
             font-size: 0.875rem;
         }
     </style>
-    
+
 </head>
 
 <body class="min-h-screen bg-white text-gray-900">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex items-center justify-between px-6 py-4">
         <div class="flex items-center gap-2">
-          <img src="/Black Gold Vintage Luxury Jewelry Logo.png" alt="Logo Treact" class="w-8 h-8 rounded" />
-          <span class="text-xl font-bold">DIATTA</span>
+            <img src="/Black Gold Vintage Luxury Jewelry Logo.png" alt="Logo Treact" class="w-8 h-8 rounded" />
+            <span class="text-xl font-bold">DIATTA</span>
         </div>
         <!-- Bouton Toggle -->
         <button
-          class="md:hidden block text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-700"
-          id="menu-toggle">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
+            class="md:hidden block text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-700"
+            id="menu-toggle">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
         </button>
         <!-- Liens de navigation -->
-        <div
-          class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 ml-auto transition-all duration-300 mr-6"
-          id="menu-links">
-          <a href="#About" class="text-sm font-medium text-gray-700 hover:text-gray-900 relative group">
-            À propos
-            <span
-              class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-          </a>
-          <a href="#blog" class="text-sm font-medium text-gray-700 hover:text-gray-900 relative group">
-            Blog
-            <span
-              class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-          </a>
-          <a href="#hero" class="text-sm font-medium text-gray-700 hover:text-gray-900 relative group">
-            Plat
-            <span
-              class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-          </a>
-          <a href="#ser" class="text-sm font-medium text-gray-700 hover:text-gray-900 relative group">
-            Service
-            <span
-              class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-          </a>
+        <div class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 ml-auto transition-all duration-300 mr-6"
+            id="menu-links">
+            <a href="#About" class="text-sm font-bold text-gray-700 hover:text-gray-900 relative group">
+                À propos
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a href="#blog" class="text-sm font-bold text-gray-700 hover:text-gray-900 relative group">
+                Blog
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a href="#hero" class="text-sm font-bold text-gray-700 hover:text-gray-900 relative group">
+                Plat
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a href="#ser" class="text-sm font-bold text-gray-700 hover:text-gray-900 relative group">
+                Service
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-700 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </a>
         </div>
         <div class="hidden md:flex items-center gap-4">
-          <button class="text-sm font-medium text-gray-700 hover:text-gray-900">Connexion</button>
-          <button
-            class="bg-purple-700 text-white text-sm font-medium px-6 py-2 rounded hover:bg-yellow-700 transition duration-300">
-            S'inscrire
-          </button>
+            <button class="text-sm font-bold text-gray-700 hover:text-gray-900">Connexion</button>
+            <button
+                class="bg-purple-700 text-white text-sm font-bold px-6 py-2 rounded hover:bg-yellow-700 transition duration-300">
+                S'inscrire
+            </button>
         </div>
-      </nav>
-      
-      
-      
-      <script>
+    </nav>
+
+
+
+    <script>
         const toggleButton = document.getElementById("menu-toggle");
         const menuLinks = document.getElementById("menu-links");
-      
+
         toggleButton.addEventListener("click", () => {
-          menuLinks.classList.toggle("hidden");
-          menuLinks.classList.toggle("flex");
+            menuLinks.classList.toggle("hidden");
+            menuLinks.classList.toggle("flex");
         });
-      </script>
-      
+    </script>
+
 
     <script>
         // JavaScript pour gérer l'état actif
@@ -197,8 +201,17 @@
 
     <!-- Hero Section -->
     <section id="About" class="px-6 py-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mt-20">
+        <style>
+            /* Empêche le défilement horizontal */
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+        </style>
         <div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 class="text-5xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Delicieux & Abordable
                 <span class="block mt-5">
                     <span class="relative inline-block bg-purple-700 text-white px-8 py-3 rounded transform -skew-x-12">
@@ -206,16 +219,16 @@
                     </span>
                 </span>
             </h1>
-            <p class="text-gray-600 mb-8 text-lg">
+            <p class="text-gray-600 mb-8 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div class="flex items-center gap-6">
                 <button
-                    class="bg-purple-700 text-white px-8 py-3 rounded text-sm font-medium hover:bg-purple-700 transition duration-300">
+                    class="bg-purple-700 text-white px-8 py-3 rounded text-sm font-bold hover:bg-purple-700 transition duration-300">
                     Order Now
                 </button>
-                <button id="openModal" class="flex items-center gap-2 hover:text-gray-900 text-sm font-medium">
+                <button id="openModal" class="flex items-center gap-2 hover:text-gray-900 text-sm font-bold">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
@@ -230,149 +243,105 @@
             <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-purple-100 rounded-xl -z-10"></div>
             <div class="absolute -top-6 -left-6 w-24 h-24 bg-purple-100 rounded-xl -z-10"></div>
         </div>
-    </section>
-    
-    <!-- Modal Structure -->
-    
-    <section id="About" class="px-6 py-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mt-20">
-        <div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Delicieux & Abordable
-                <span class="block mt-5">
-                    <span class="relative inline-block bg-purple-700 text-white px-8 py-3 rounded transform -skew-x-12">
-                        <span class="inline-block transform skew-x-12">Meals Near You.</span>
-                    </span>
-                </span>
-            </h1>
-            <p class="text-gray-600 mb-8 text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex items-center gap-6">
-                <button
-                    class="bg-purple-700 text-white px-8 py-3 rounded text-sm font-medium hover:bg-purple-700 transition duration-300">
-                    Order Now
-                </button>
-                <button id="openModal" class="flex items-center gap-2 hover:text-gray-900 text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    Meet The Chefs
-                </button>
-            </div>
-        </div>
-        <div class="relative">
-            <img src="uuu.jpeg" alt="Delicious food plates" class="rounded-3xl w-full h-auto" />
-            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-purple-100 rounded-xl -z-10"></div>
-            <div class="absolute -top-6 -left-6 w-24 h-24 bg-purple-100 rounded-xl -z-10"></div>
-        </div>
-    </section>
-    
-    <!-- Modal Structure -->
-    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
-        <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full">
-            <div class="relative">
-                <!-- Close Button -->
-                <button id="closeModal" class="absolute top-2 right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
-                    &times;
-                </button>
-                
-                <!-- Cover Image -->
-                <div id="videoCover">
-                    <img
-                        src="ti.png"
-                        alt="Video Cover"
-                        class="w-full h-full object-cover rounded-lg cursor-pointer"
-                    />
+
+        <!-- Modal Structure -->
+        <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full">
+                <div class="relative">
+                    <!-- Close Button -->
+                    <button id="closeModal"
+                        class="absolute top-2 right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
+                        &times;
+                    </button>
+
+                    <!-- Cover Image -->
+                    <div id="videoCover">
+                        <img src="ti.png" alt="Video Cover"
+                            class="w-full h-full object-cover rounded-lg cursor-pointer" />
+                    </div>
+
+                    <!-- YouTube Video (hidden by default) -->
+                    <iframe id="videoFrame" class="hidden" width="100%" height="315"
+                        src="https://www.youtube.com/embed/_GuOjXYl5ew?start=100" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
                 </div>
-    
-                <!-- YouTube Video (hidden by default) -->
-                <iframe
-                    id="videoFrame"
-                    class="hidden"
-                    width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/_GuOjXYl5ew?start=100"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
             </div>
         </div>
-    </div>
-    
-    <script>
-        const openModal = document.getElementById('openModal');
-        const closeModal = document.getElementById('closeModal');
-        const videoModal = document.getElementById('videoModal');
-        const videoCover = document.getElementById('videoCover');
-        const videoFrame = document.getElementById('videoFrame');
-    
-        // Open the modal
-        openModal.addEventListener('click', () => {
-            videoModal.classList.remove('hidden');
-        });
-    
-        // Close the modal
-        closeModal.addEventListener('click', () => {
-            videoModal.classList.add('hidden');
-            videoFrame.classList.add('hidden');
-            videoCover.classList.remove('hidden');
-    
-            // Pause video when modal is closed
-            const iframeSrc = videoFrame.src;
-            videoFrame.src = ""; // Clear the src
-            videoFrame.src = iframeSrc; // Reset src
-        });
-    
-        // Display video when clicking on the cover
-        videoCover.addEventListener('click', () => {
-            videoCover.classList.add('hidden');
-            videoFrame.classList.remove('hidden');
-        });
-    </script>
-    
-    
-    
+
+        <script>
+            const openModal = document.getElementById('openModal');
+            const closeModal = document.getElementById('closeModal');
+            const videoModal = document.getElementById('videoModal');
+            const videoCover = document.getElementById('videoCover');
+            const videoFrame = document.getElementById('videoFrame');
+
+            // Open the modal
+            openModal.addEventListener('click', () => {
+                videoModal.classList.remove('hidden');
+            });
+
+            // Close the modal
+            closeModal.addEventListener('click', () => {
+                videoModal.classList.add('hidden');
+                videoFrame.classList.add('hidden');
+                videoCover.classList.remove('hidden');
+
+                // Pause video when modal is closed
+                const iframeSrc = videoFrame.src;
+                videoFrame.src = ""; // Clear the src
+                videoFrame.src = iframeSrc; // Reset src
+            });
+
+            // Display video when clicking on the cover
+            videoCover.addEventListener('click', () => {
+                videoCover.classList.add('hidden');
+                videoFrame.classList.remove('hidden');
+            });
+        </script>
+    </section>
+
+
 
 
     <!-- About Section -->
     <section id="blog" class="px-6 py-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div class="relative">
-          <img src="ou5.jpg" alt="Burger and fries" class="rounded-3xl w-full h-auto" />
-          <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-purple-100 rounded-lg -z-10"></div>
-          <div class="absolute -top-6 -right-6 w-24 h-24 bg-purple-100 rounded-lg -z-10"></div>
+            <img src="ou5.jpg" alt="Burger and fries" class="rounded-3xl w-full h-auto" />
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-purple-100 rounded-lg -z-10"></div>
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-purple-100 rounded-lg -z-10"></div>
         </div>
         <div>
-          <span class="text-purple-700 font-semibold text-sm">Etabli depuis 2014</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6 leading-tight">
-            Nous servons depuis
-            <span class="block mt-2">
-              <span class="relative inline-block bg-purple-700 text-white px-8 py-3 rounded transform -skew-x-12 ">
-                <span class="inline-block transform skew-x-12">plus de 5 ans</span>
-              </span>
-            </span>
-          </h2>
-          <p class="text-gray-600 text-lg mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-      
-          <p class="text-gray-600 text-lg mb-12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-      
-          <button class="mb-7 bg-purple-700 text-white px-6 py-2 rounded hover:bg-yellow-700 transition">
-            Lastest Offers
-          </button>
+            <span class="text-purple-700 font-semibold text-sm">Etabli depuis 2014</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6 leading-tight">
+                Nous servons depuis
+                <span class="block mt-2">
+                    <span
+                        class="relative inline-block bg-purple-700 text-white px-8 py-3 rounded transform -skew-x-12 ">
+                        <span class="inline-block transform skew-x-12">plus de 5 ans</span>
+                    </span>
+                </span>
+            </h2>
+            <p class="text-gray-600 text-lg mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <p class="text-gray-600 text-lg mb-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <button
+                class="text-sm font-bold mb-7 bg-purple-700 text-white px-6 py-2 rounded hover:bg-yellow-700 transition">
+                Lastest Offers
+            </button>
         </div>
-      </section>
-      
-      
+    </section>
+
+
     <!-------------- cart image--------------->
 
     <section id="hero" class="px-6 py-20 max-w-7xl mx-auto">
@@ -380,31 +349,35 @@
         <div class="flex flex-col md:flex-row justify-between items-center mb-12">
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 md:mb-0">
                 Découvrez notre
-                <span class="bg-purple-700 text-white px-4 py-2 rounded inline-block mt-2">
+                <span class="bg-purple-700 text-white py-3 inline-block transform skew-x-12">
                     menu.
                 </span>
             </h2>
             <div class="flex gap-4">
-                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors" data-category="Entrées">
+                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors"
+                    data-category="Entrées">
                     Entrées
                 </button>
-                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors" data-category="Plats">
+                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors"
+                    data-category="Plats">
                     Plats
                 </button>
-                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors" data-category="Soupes">
+                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors"
+                    data-category="Soupes">
                     Soupes
                 </button>
-                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors" data-category="Desserts">
+                <button class="px-6 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors"
+                    data-category="Desserts">
                     Desserts
                 </button>
             </div>
         </div>
-    
+
         <!-- Menu Items Grid -->
         <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Les plats s'affichent dynamiquement ici -->
         </div>
-    
+
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const dishes = [
@@ -417,10 +390,10 @@
                     { img: "spak.jpg", title: "Spaghettis", description: "Senegalese Rice and Fish", price: "$7.99", category: "Soupes" },
                     { img: "macoroni.jpg", title: "Macaroni", description: "Cassava Couscous", price: "$5.49", category: "Desserts" }
                 ];
-    
+
                 const container = document.querySelector(".container");
                 const buttons = document.querySelectorAll(".flex.gap-4 button");
-    
+
                 // Fonction pour afficher les plats selon la catégorie
                 function filterDishes(category) {
                     container.innerHTML = ""; // Vide le conteneur
@@ -444,29 +417,29 @@
                         }
                     });
                 }
-    
+
                 // Ajoute un événement de clic à chaque bouton
                 buttons.forEach(button => {
                     button.addEventListener("click", () => {
                         const category = button.getAttribute("data-category");
                         filterDishes(category);
-    
+
                         // Met à jour les styles des boutons pour indiquer la sélection
                         buttons.forEach(btn => btn.classList.remove("bg-slate-600", "text-white"));
                         button.classList.add("bg-slate-600", "text-white");
                     });
                 });
-    
+
                 // Affiche toutes les images au chargement (catégorie "Entrées")
                 filterDishes("Entrées");
             });
         </script>
     </section>
-    
-    
-    
-    
-    
+
+
+
+
+
 
     <!---------------service--------------->
 
@@ -688,6 +661,23 @@
                     <li><a href="#" class="text-gray-600 hover:text-gray-900">Office</a></li>
                 </ul>
             </div>
+            <!-- Newsletter Section -->
+            <div class="md:col-span-1">
+                <h3 class="font-bold text-gray-700 mb-4">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                <form class="space-y-4">
+                    <p class="text-gray-600">We deliver high quality blog posts written by professionals weekly. And we
+                        promise no spam.</p>
+                    <div class="flex ">
+                        <input type="email" placeholder="Your Email Address"
+                            class="flex-1 px-4 py-2 rounded bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <button type="submit"
+                            class="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+
 
             <!-- LEGAL Column -->
             <div>
@@ -699,27 +689,11 @@
                     <li><a href="#" class="text-gray-600 hover:text-gray-900">Disclaimer</a></li>
                 </ul>
             </div>
-
-            <!-- Newsletter Section -->
-            <div class="md:col-span-1">
-                <h3 class="font-bold text-gray-700 mb-4">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                <p class="text-gray-600 mb-4">We deliver high quality blog posts written by professionals weekly. And we
-                    promise no spam.</p>
-                    <form class="flex gap-2 max-w-lg mx-auto px-4">
-                        <input type="email" placeholder="Your Email Address"
-                            class="flex-1 px-4 py-2 rounded bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        <button type="submit"
-                            class="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors">
-                            Subscribe
-                        </button>
-                    </form>
-                    
-            </div>
         </div>
 
         <!-- Bottom Bar -->
         <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <!-- Logo and Company Name -->
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-purple-600 rounded flex items-center justify-center">
@@ -732,50 +706,40 @@
                     <span class="text-gray-900 font-bold">Treact Inc.</span>
                 </div>
 
-                <!-- Copyright -->
-                <!-- Copyright with Logo -->
-                <div class="flex items-center gap-2 text-gray-500">
-                    <!-- Logo SVG -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                        </path>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                    </svg>
+                <!-- Newsletter and Social Links -->
+                <div class="flex flex-col md:flex-row md:items-center gap-4">
+                    <!-- Newsletter Form -->
 
-                    <!-- Copyright Text -->
-                    <span>© 2018 Treact Inc. All Rights Reserved.</span>
-                </div>
 
-                <!-- Social Links -->
-                <div class="flex gap-4">
-                    <a href="#"
-                        class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-                        </svg>
-                    </a>
+                    <!-- Social Links -->
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+
 
 
 </body>
